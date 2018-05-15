@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 // Import css
 import css from "./styles/style.styl";
 //Import Components
-import Main from "./components/Main";
+import App from "./components/App";
 import PhotoGrid from "./components/PhotoGrid";
 import Single from "./components/Single";
 // Import React router
@@ -14,7 +14,7 @@ import store, { history } from "./store";
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={Main}>
+      <Route path="/" component={App}>
         <IndexRoute component={PhotoGrid}></IndexRoute>
         <Route path="/posts/:postId" component={Single}></Route>
       </Route>
